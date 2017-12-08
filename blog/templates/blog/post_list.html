@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Ingubaru's Blog</title>
-</head>
-<body>
-	<div>
-		<h1><a href="/">Ingubaru Blog</a></h1>
-	</div>
+{% extends "blog/base.html" %}
 
+{% block content %}
     {% for post in posts %}
-        <div>
+        <div class="post">
+            <div class="date">
+                <p>Опубликованно: {{ post.published_date }}</p>
+            </div>
             <h1><a href="">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
-            <p>{{ post.published_date }}</p>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}
+                
