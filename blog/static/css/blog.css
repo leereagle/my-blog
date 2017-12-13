@@ -19,11 +19,18 @@ h1, h2, h3, h4 {
 }
 
 .date {
+    float: right;
     color: #828282;
 }
 
 .save {
     float: right;
+}
+
+.edit {
+    float: right;
+    margin-top: -5px;
+    margin-right: 10px;
 }
 
 .post-form textarea, .post-form input {
